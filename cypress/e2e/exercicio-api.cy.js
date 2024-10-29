@@ -1,7 +1,7 @@
 /// <reference types= "cypress"/>
 
 import { faker } from '@faker-js/faker';
-import contracts from'../contracts/produtos.contract'
+import contracts from'../contracts/usuarios.contrato'
 
 describe('Testes da Funcionalidade Usuários', () => {
 
@@ -10,7 +10,7 @@ describe('Testes da Funcionalidade Usuários', () => {
   var senha = faker.internet.password()
   
   it('Deve validar contrato de usuários', () => {
-    cy.request('produtos').then(response => {
+    cy.request('usuarios').then(response => {
       return contracts.validateAsync(response.body)
   })
   });
