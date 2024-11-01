@@ -51,7 +51,7 @@ describe('Testes da Funcionalidade Usuários', () => {
         method: 'PUT',
         url: `usuarios/${id}`,
         body: {
-        "nome": "Fernando Sampaio",
+        "nome": "Algusto Sampaio",
         "email": email,
         "password": senha,
         "administrador": "true"
