@@ -5,7 +5,7 @@ pipeline {
         stage('Clonando e instalando Dependencias') {
             steps {
                 git branch: 'main', url: 'https://github.com/IsmaelGabrielDev/teste-api-ebac.git'
-                bat 'npm isntall'
+                bat 'npm install'
             }
         }
         stage('Subir o serverest e realizar os testes') {
