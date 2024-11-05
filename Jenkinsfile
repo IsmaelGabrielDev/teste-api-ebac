@@ -8,10 +8,16 @@ pipeline {
                 bat 'npm install'
             }
         }
-        stage('Subir o serverest e realizar os testes') {
+        stage('Subir o servidor') {
             steps {
                 bat '''set NO_COLOR=1
-npm run cy:run-ci'''
+start /b npm start'''
+            }
+        }
+        stage('Realizar os testes') {
+            steps {
+                bat '''set NO_COLOR=1
+npm run cy:run'''
             }
         }
     }

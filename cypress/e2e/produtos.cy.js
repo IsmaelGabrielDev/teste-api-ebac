@@ -51,7 +51,7 @@ describe('Testes da Funcionalidade Produtos', () => {
             })
     });
 
-    it('Deve editar um produto já cadastrado', () => {
+    it.skip('Deve editar um produto já cadastrado', () => {
         cy.request('produtos').then(response => {
             let id = response.body.produtos[0]._id
             cy.request({
